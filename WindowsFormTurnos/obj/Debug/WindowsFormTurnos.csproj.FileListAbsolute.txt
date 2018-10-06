@@ -1,1 +1,2 @@
 C:\Users\Prophet\Desktop\WindowsFormTurnos\WindowsFormTurnos\bin\Debug\WindowsFormTurnos.exe.config
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\bin\Debug\WindowsFormTurnos.exe.config
