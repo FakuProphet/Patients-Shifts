@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 
 namespace WindowsFormTurnos.AccesoBBDD
 {
@@ -31,9 +31,9 @@ namespace WindowsFormTurnos.AccesoBBDD
         private void Initialize()
         {
             server = "localhost";
-            database = "miBBDD";
-            uid = "faku";
-            password = "passw0rd";
+            database = "turnos";
+            uid = "Facundo";
+            password = "n0IHu9Ef0acPgpUx";
             string connectionString;
 
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
@@ -43,24 +43,24 @@ namespace WindowsFormTurnos.AccesoBBDD
             connection = new MySqlConnection(connectionString);
         }
 
-        private bool OpenConnection()
+        public bool OpenConnection()
         {
             try
             {
                 connection.Open();
-                Console.WriteLine("Conexión ok");
+                MessageBox.Show("conexión exitosa","Mi Conexión");
                 return true;
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine(" Error al abrir la conexión [" + ex.Number + "]: " + ex.Message);
+                MessageBox.Show(" Error al abrir la conexión [" + ex.Number + "]: " + ex.Message, "Mi Conexión");
                 return false;
             }
 
         }
 
         //Close connection
-        private bool CloseConnection()
+        public bool CloseConnection()
         {
             try
             {
@@ -69,7 +69,7 @@ namespace WindowsFormTurnos.AccesoBBDD
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine("Error al cerrar la conexión [" + ex.Number + "]: " + ex.Message);
+                MessageBox.Show("Error al cerrar la conexión [" + ex.Number + "]: " + ex.Message, "Mi Conexión");
                 return false;
             }
 
