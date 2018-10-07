@@ -1,2 +1,15 @@
 C:\Users\Prophet\Desktop\WindowsFormTurnos\WindowsFormTurnos\bin\Debug\WindowsFormTurnos.exe.config
 C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\bin\Debug\WindowsFormTurnos.exe.config
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\bin\Debug\WindowsFormTurnos.exe
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\bin\Debug\WindowsFormTurnos.pdb
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\bin\Debug\MySql.Data.dll
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\bin\Debug\MySql.Data.xml
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\obj\Debug\WindowsFormTurnos.csprojResolveAssemblyReference.cache
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\obj\Debug\WindowsFormTurnos.Form1.resources
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\obj\Debug\WindowsFormTurnos.Properties.Resources.resources
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\obj\Debug\WindowsFormTurnos.csproj.GenerateResource.Cache
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\obj\Debug\WindowsFormTurnos.exe
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\obj\Debug\WindowsFormTurnos.pdb
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\bin\Debug\MetroFramework.Design.dll
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\bin\Debug\MetroFramework.dll
+C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\bin\Debug\MetroFramework.Fonts.dll
