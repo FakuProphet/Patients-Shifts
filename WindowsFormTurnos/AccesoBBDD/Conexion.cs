@@ -31,8 +31,8 @@ namespace WindowsFormTurnos.AccesoBBDD
         private void Initialize()
         {
             server = "localhost";
-            database = "mydb";
-            uid = "iker";
+            database = "miBBDD";
+            uid = "faku";
             password = "passw0rd";
             string connectionString;
 
@@ -48,12 +48,12 @@ namespace WindowsFormTurnos.AccesoBBDD
             try
             {
                 connection.Open();
-                Console.WriteLine("Connection ok.");
+                Console.WriteLine("Conexión ok");
                 return true;
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine("Open connection Error [" + ex.Number + "]: " + ex.Message);
+                Console.WriteLine(" Error al abrir la conexión [" + ex.Number + "]: " + ex.Message);
                 return false;
             }
 
@@ -69,7 +69,7 @@ namespace WindowsFormTurnos.AccesoBBDD
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine("Close connection Error [" + ex.Number + "]: " + ex.Message);
+                Console.WriteLine("Error al cerrar la conexión [" + ex.Number + "]: " + ex.Message);
                 return false;
             }
 
