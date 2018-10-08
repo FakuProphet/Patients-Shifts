@@ -20,7 +20,14 @@ namespace WindowsFormTurnos.AccesoBBDD
         private string database;
         private string uid;
         private string password;
+        private string cadena;
 
+      
+
+        public string GetCadenaConexion
+        {
+            get { return cadena; }      
+        }
 
 
         public Conexion()
@@ -35,44 +42,37 @@ namespace WindowsFormTurnos.AccesoBBDD
             uid = "Facundo";
             password = "n0IHu9Ef0acPgpUx";
             string connectionString;
-
+            
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
+            cadena = connectionString;
 
             connection = new MySqlConnection(connectionString);
         }
 
-        public bool OpenConnection()
+        public MySqlConnection OpenConnection()
         {
             try
             {
+                MySqlConnection conexion = new MySqlConnection(cadena);
                 connection.Open();
-                MessageBox.Show("conexión exitosa","Mi Conexión");
-                return true;
+                MessageBox.Show("Conexión exitosa", "Mi conexión");
+                return conexion;
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show(" Error al abrir la conexión [" + ex.Number + "]: " + ex.Message, "Mi Conexión");
-                return false;
+                throw new Exception("Error en la conexion: " + ex.ToString());
             }
 
         }
 
         //Close connection
-        public bool CloseConnection()
+        public MySqlConnection CloseConnection()
         {
-            try
-            {
-                connection.Close();
-                return true;
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("Error al cerrar la conexión [" + ex.Number + "]: " + ex.Message, "Mi Conexión");
-                return false;
-            }
-
+            MySqlConnection desconectar = new MySqlConnection(cadena);
+            desconectar.Close();
+            desconectar.Dispose();
+            return desconectar;
         }
     }
 }

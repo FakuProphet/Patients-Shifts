@@ -50,37 +50,38 @@ namespace WindowsFormTurnos
             {
                 int codigo = Convert.ToInt32(txtCodigoPaciente.Text);
                 int idHora = Convert.ToInt32(cboHora.SelectedValue);
-                int ext = 0; int cito = 0; int eritro = 0; int reti = 0;
+              
 
                 if (ckbExt.Checked)
                 {
-                    ext = 1;
+                   int ext = 1;
                 }
 
                 if (ckbCito.Checked)
                 {
-                    cito = 1;
+                   int cito = 1;
                 }
 
                 if (ckbEritro.Checked)
                 {
-                    eritro = 1;
+                   int eritro = 1;
                 }
 
                 if (ckbReti.Checked)
                 {
-                    reti = 1;
+                    int reti = 1;
                 }
 
 
                 if (MetroFramework.MetroMessageBox.Show(this, "Se recomienda revisar que los pedidos esten correctos antes de continuar. Desea registrar el turno? ", "Registrar turno", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
+                {/*
                     string tabla = "Turnos";
                     miGestor.generarTurno(codigo, idHora, tabla, ext, cito, eritro, reti);
                     string parametro = txtFecha.Text.Trim();
                     miGestor.cargarDataGrid(dataGridView1, "select * from turnos v where fecha like '%" + parametro + "%'");
                     lblExisteTurno.Text = "";
                     btnGrabarTurno.Enabled = false;
+                    */
                 }
             }
 

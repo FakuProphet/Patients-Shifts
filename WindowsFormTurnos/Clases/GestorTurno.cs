@@ -12,7 +12,7 @@ namespace WindowsFormTurnos.Clases
     class GestorTurno
     {
 
-        SqlCommand cmd;
+        
         SqlDataReader dr;
         const int tam = 1000;
         Conexion miConexion= new Conexion();
@@ -26,7 +26,7 @@ namespace WindowsFormTurnos.Clases
 
         public void generarTurno(int codigoPac, int hora,  int ext, int cito, int eritro, int reti)
         {
-
+            String cadena = miConexion.GetCadenaConexion;
             String query = "INSERT INTO TURNOS (paciente,hora,extraccion,citologico,eritrosedimentacion,reticulocitos) " +
                            "VALUES (@paciente,@hora,@ext,@cito,@eritro,@reti)";
             using (MySqlCommand command = new MySqlCommand(query,miConexion.OpenConnection()))
