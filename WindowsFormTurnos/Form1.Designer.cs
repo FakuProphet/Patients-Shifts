@@ -329,6 +329,7 @@
             this.btnGrabarTurno.Text = "Generar Turno";
             this.btnGrabarTurno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGrabarTurno.UseVisualStyleBackColor = true;
+            this.btnGrabarTurno.Click += new System.EventHandler(this.btnGrabarTurno_Click);
             // 
             // btnEliminarTurno
             // 
