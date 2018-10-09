@@ -1,10 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
-using System.Data.SqlClient;
-
-
-
 using WindowsFormTurnos.AccesoBBDD;
 
 
@@ -65,15 +61,15 @@ namespace WindowsFormTurnos.Clases
             if (dr.Read())
 
             {
-               
+                if (!pDr.IsDBNull(0))
+                {
+                    bandera = false;
+                }
                 if (pDr.IsDBNull(0))
                 {
                     bandera = true;
                 }
-                else if (!pDr.IsDBNull(0))
-                {
-                    bandera = false;
-                }
+               
             }
            
 
