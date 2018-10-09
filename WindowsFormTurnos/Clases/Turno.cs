@@ -14,7 +14,9 @@ namespace WindowsFormTurnos.Clases
         public int eritro { get; set; }
         public int reti { get; set; }
         public int idHora { get; set; }
-        
+        public string fecha { get; set; }
+
+
         public Turno() { }
 
 

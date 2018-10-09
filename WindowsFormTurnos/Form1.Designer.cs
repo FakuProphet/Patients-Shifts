@@ -125,6 +125,7 @@
             this.txtFiltrarTurnos.Name = "txtFiltrarTurnos";
             this.txtFiltrarTurnos.Size = new System.Drawing.Size(120, 20);
             this.txtFiltrarTurnos.TabIndex = 61;
+            this.txtFiltrarTurnos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltrarTurnos_KeyPress);
             // 
             // btnCargarListado
             // 
@@ -403,6 +404,7 @@
             this.btnVerificarTurno.TabIndex = 1;
             this.btnVerificarTurno.Text = "Verificar Turno ";
             this.btnVerificarTurno.UseVisualStyleBackColor = false;
+            this.btnVerificarTurno.Click += new System.EventHandler(this.btnVerificarTurno_Click_1);
             // 
             // txtCodigoPaciente
             // 
@@ -473,14 +475,14 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(993, 223);
+            this.dataGridView1.Size = new System.Drawing.Size(993, 163);
             this.dataGridView1.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 621);
+            this.ClientSize = new System.Drawing.Size(1004, 606);
             this.Controls.Add(this.lblTurnosCancelados);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button2);

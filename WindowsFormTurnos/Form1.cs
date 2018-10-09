@@ -79,7 +79,7 @@ namespace WindowsFormTurnos
                 }
 
                 nuevo.idHora = Convert.ToInt32(cboHora.SelectedValue);
-
+                nuevo.fecha = txtFecha.Text;
 
                 if (MetroFramework.MetroMessageBox.Show(this, "Se recomienda revisar que los pedidos esten correctos antes de continuar. Desea registrar el turno? ", "Registrar turno", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 { 
@@ -138,9 +138,57 @@ namespace WindowsFormTurnos
 
 
 
-        private void btnVerificarTurno_Click(object sender, EventArgs e)
+      
+
+        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                txtDni.Focus();
+                return;
+            }
+        }
+
+        private void txtFiltrarTurnos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                txtFiltrarTurnos.Focus();
+                return;
+            }
+        }
+
+
+        private bool disponibilidadTurnoHora(string hora, string fecha)
+        {
+            bool disponible = true;
+
+            DataTable miDT = miGestor.realizarConsulta("select * from turnoslab where fecha like '%" + fecha + "%'");
+
+            foreach (DataRow fila in miDT.Rows)
+            {
+                if (fila != null)
+                {
+                    if (fila[0].ToString() == hora && fila[1].ToString() == "Cancelado")
+                    {
+                        disponible = true;
+                        lblExisteTurno.ForeColor = Color.Green;
+                        lblExisteTurno.Text = "Horario disponible";
+                        
+                    }
+                }
+
+            }
+
+            return disponible;
+        }
+
+        private void btnVerificarTurno_Click_1(object sender, EventArgs e)
+        {
             int id = Convert.ToInt32(cboHora.SelectedValue);
             string fecha = txtFecha.Text;
 
@@ -155,17 +203,6 @@ namespace WindowsFormTurnos
                 lblExisteTurno.Text = "No Disponible";
                 lblExisteTurno.ForeColor = Color.Red;
                 btnGrabarTurno.Enabled = false;
-            }
-        }
-
-        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                MessageBox.Show("Solo se permiten numeros.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                txtDni.Focus();
-                return;
             }
         }
     }
