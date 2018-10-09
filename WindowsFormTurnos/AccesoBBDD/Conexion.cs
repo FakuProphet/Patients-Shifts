@@ -1,13 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormTurnos.AccesoBBDD
@@ -47,17 +39,17 @@ namespace WindowsFormTurnos.AccesoBBDD
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
             cadena = connectionString;
 
-            connection = new MySqlConnection(connectionString);
+           // connection = new MySqlConnection(connectionString);
         }
 
         public MySqlConnection OpenConnection()
         {
             try
             {
-                MySqlConnection conexion = new MySqlConnection(cadena);
+                connection = new MySqlConnection(GetCadenaConexion);
                 connection.Open();
                 MessageBox.Show("Conexión exitosa", "Mi conexión");
-                return conexion;
+                return connection;
             }
             catch (MySqlException ex)
             {

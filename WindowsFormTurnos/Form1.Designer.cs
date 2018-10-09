@@ -315,7 +315,6 @@
             // 
             // btnGrabarTurno
             // 
-            this.btnGrabarTurno.Enabled = false;
             this.btnGrabarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabarTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGrabarTurno.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -419,10 +418,8 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(401, 46);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(248, 27);
             this.txtNombre.TabIndex = 17;
             // 
@@ -493,11 +490,9 @@
             // 
             // txtDni
             // 
-            this.txtDni.Enabled = false;
             this.txtDni.Location = new System.Drawing.Point(180, 80);
             this.txtDni.Margin = new System.Windows.Forms.Padding(4);
             this.txtDni.Name = "txtDni";
-            this.txtDni.ReadOnly = true;
             this.txtDni.Size = new System.Drawing.Size(133, 27);
             this.txtDni.TabIndex = 0;
             // 

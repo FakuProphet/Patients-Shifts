@@ -14,16 +14,9 @@ namespace WindowsFormTurnos.Clases
     class GestorTurno
     {
 
-        
-        SqlDataReader dr;
-        const int tam = 1000;
-        Conexion miConexion= new Conexion();
 
-
+        Conexion miConexion = new Conexion();
       
-
-        public SqlDataReader pDr
-        { set { dr = value; } get { return dr; } }
 
 
         public DataTable realizarConsulta(string tabla)
@@ -39,7 +32,7 @@ namespace WindowsFormTurnos.Clases
         public void generarTurno(Turno t)
         {
             String cadena = miConexion.GetCadenaConexion;
-            String query = "INSERT INTO TURNOS (nombrePaciente,eritro,cito,retis,dni,horaID) " +
+            String query = "INSERT INTO turnoslab (nombrePaciente,eritro,cito,retis,dni,horaID) " +
                            "VALUES (@paciente,@eritro,@cito,@reti,@dni,@horaID)";
             using (MySqlCommand command = new MySqlCommand(query,miConexion.OpenConnection()))
             {

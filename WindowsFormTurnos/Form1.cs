@@ -40,6 +40,7 @@ namespace WindowsFormTurnos
         {
             fechaActual();
             cargarCombo(cboHora,"horas");
+            efectosDataGridView();
         }
 
         private void fechaActual()
@@ -63,42 +64,36 @@ namespace WindowsFormTurnos
 
             try
             {
-                Paciente nuevo = new Paciente();
-                nuevo.nombre = txtCodigoPaciente.Text;
-                nuevo.doc = txtDni.Text;
-              
-
-                if (ckbExt.Checked)
-                {
-                   int ext = 1;
-                }
-
+                Turno nuevo = new Turno();
+                nuevo.nombre = txtNombre.Text;
+                nuevo.documento = Convert.ToInt32( txtDni.Text);
+                
                 if (ckbCito.Checked)
                 {
-                   int cito = 1;
+                   nuevo.cito = 1;
                 }
 
                 if (ckbEritro.Checked)
                 {
-                   int eritro = 1;
+                   nuevo.eritro = 1;
                 }
 
                 if (ckbReti.Checked)
                 {
-                    int reti = 1;
+                    nuevo.reti = 1;
                 }
+
+                nuevo.idHora = Convert.ToInt32(cboHora.SelectedValue);
 
 
                 if (MetroFramework.MetroMessageBox.Show(this, "Se recomienda revisar que los pedidos esten correctos antes de continuar. Desea registrar el turno? ", "Registrar turno", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
+                { 
                     
-                    string tabla = "Turnos";
-                    miGestor.generarTurno(codigo, idHora, tabla, ext, cito, eritro, reti);
+                    miGestor.generarTurno(nuevo);
                     string parametro = txtFecha.Text.Trim();
-                    cargarDataGrid(dataGridView1, "select * from turnoslab v where fecha like '%" + parametro + "%'");
+                    cargarDataGrid(dataGridView1, "select * from turnoslab ");
                     lblExisteTurno.Text = "";
-                    btnGrabarTurno.Enabled = false;
-                    
+                    btnGrabarTurno.Enabled = false;    
                 }
             }
 
@@ -106,6 +101,19 @@ namespace WindowsFormTurnos
             {
                 MetroFramework.MetroMessageBox.Show(this, error.ToString());
             }
+        }
+
+        public void efectosDataGridView()
+        {
+            
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
         }
 
 
