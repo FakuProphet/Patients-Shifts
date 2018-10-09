@@ -1,12 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormTurnos.AccesoBBDD;
 using WindowsFormTurnos.Clases;
@@ -138,5 +133,40 @@ namespace WindowsFormTurnos
             //---------------------------------------------------------------------
         }
 
+
+        
+
+
+
+        private void btnVerificarTurno_Click(object sender, EventArgs e)
+        {
+           
+            int id = Convert.ToInt32(cboHora.SelectedValue);
+            string fecha = txtFecha.Text;
+
+            if (miGestor.GetDisponibilidadHora(id, fecha))
+            {
+                lblExisteTurno.Text = "Disponible";
+                lblExisteTurno.ForeColor = Color.Green;
+                btnGrabarTurno.Enabled = true;
+            }
+            else
+            {
+                lblExisteTurno.Text = "No Disponible";
+                lblExisteTurno.ForeColor = Color.Red;
+                btnGrabarTurno.Enabled = false;
+            }
+        }
+
+        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                txtDni.Focus();
+                return;
+            }
+        }
     }
 }

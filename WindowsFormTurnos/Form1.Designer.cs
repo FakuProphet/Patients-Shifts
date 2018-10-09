@@ -34,7 +34,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtFiltrarTurnos = new System.Windows.Forms.TextBox();
             this.btnCargarListado = new System.Windows.Forms.Button();
-            this.btnUpdateListado = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.ckbEritro = new System.Windows.Forms.CheckBox();
             this.ckbReti = new System.Windows.Forms.CheckBox();
@@ -42,11 +41,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.ckbExt = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAbrirAdmPacientes = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.lstPacientes = new System.Windows.Forms.ListBox();
             this.btnGrabarTurno = new System.Windows.Forms.Button();
             this.btnEliminarTurno = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -102,7 +97,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(587, 501);
+            this.button2.Location = new System.Drawing.Point(587, 504);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(48, 31);
@@ -144,18 +139,6 @@
             this.btnCargarListado.Text = "Cargar Listado";
             this.btnCargarListado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCargarListado.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdateListado
-            // 
-            this.btnUpdateListado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateListado.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdateListado.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnUpdateListado.Location = new System.Drawing.Point(1117, 404);
-            this.btnUpdateListado.Name = "btnUpdateListado";
-            this.btnUpdateListado.Size = new System.Drawing.Size(40, 41);
-            this.btnUpdateListado.TabIndex = 59;
-            this.btnUpdateListado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateListado.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -250,78 +233,29 @@
             this.label6.Text = "Listado de Turnos ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(1005, 510);
-            this.txtBuscar.MaxLength = 8;
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(105, 20);
-            this.txtBuscar.TabIndex = 52;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(916, 505);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 27);
-            this.button1.TabIndex = 50;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnAbrirAdmPacientes
-            // 
-            this.btnAbrirAdmPacientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAbrirAdmPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbrirAdmPacientes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAbrirAdmPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAbrirAdmPacientes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAbrirAdmPacientes.Location = new System.Drawing.Point(1117, 453);
-            this.btnAbrirAdmPacientes.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAbrirAdmPacientes.Name = "btnAbrirAdmPacientes";
-            this.btnAbrirAdmPacientes.Size = new System.Drawing.Size(40, 40);
-            this.btnAbrirAdmPacientes.TabIndex = 51;
-            this.btnAbrirAdmPacientes.Text = "...";
-            this.btnAbrirAdmPacientes.UseVisualStyleBackColor = false;
-            // 
             // btnSalir
             // 
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSalir.Location = new System.Drawing.Point(964, 554);
+            this.btnSalir.Location = new System.Drawing.Point(909, 554);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(193, 46);
+            this.btnSalir.Size = new System.Drawing.Size(89, 46);
             this.btnSalir.TabIndex = 49;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // lstPacientes
-            // 
-            this.lstPacientes.Font = new System.Drawing.Font("Verdana", 12F);
-            this.lstPacientes.FormattingEnabled = true;
-            this.lstPacientes.ItemHeight = 18;
-            this.lstPacientes.Location = new System.Drawing.Point(1005, 75);
-            this.lstPacientes.Margin = new System.Windows.Forms.Padding(4);
-            this.lstPacientes.Name = "lstPacientes";
-            this.lstPacientes.Size = new System.Drawing.Size(105, 418);
-            this.lstPacientes.TabIndex = 54;
             // 
             // btnGrabarTurno
             // 
             this.btnGrabarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrabarTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGrabarTurno.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGrabarTurno.Location = new System.Drawing.Point(553, 554);
+            this.btnGrabarTurno.Location = new System.Drawing.Point(696, 554);
             this.btnGrabarTurno.Margin = new System.Windows.Forms.Padding(4);
             this.btnGrabarTurno.Name = "btnGrabarTurno";
-            this.btnGrabarTurno.Size = new System.Drawing.Size(193, 46);
+            this.btnGrabarTurno.Size = new System.Drawing.Size(97, 46);
             this.btnGrabarTurno.TabIndex = 47;
             this.btnGrabarTurno.Text = "Generar Turno";
             this.btnGrabarTurno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,10 +267,10 @@
             this.btnEliminarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminarTurno.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEliminarTurno.Location = new System.Drawing.Point(758, 554);
+            this.btnEliminarTurno.Location = new System.Drawing.Point(801, 554);
             this.btnEliminarTurno.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarTurno.Name = "btnEliminarTurno";
-            this.btnEliminarTurno.Size = new System.Drawing.Size(193, 46);
+            this.btnEliminarTurno.Size = new System.Drawing.Size(100, 46);
             this.btnEliminarTurno.TabIndex = 48;
             this.btnEliminarTurno.Text = "Cancelar Turno";
             this.btnEliminarTurno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -495,6 +429,7 @@
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(133, 27);
             this.txtDni.TabIndex = 0;
+            this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress);
             // 
             // label3
             // 
@@ -545,22 +480,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 621);
+            this.ClientSize = new System.Drawing.Size(1004, 621);
             this.Controls.Add(this.lblTurnosCancelados);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtFiltrarTurnos);
             this.Controls.Add(this.btnCargarListado);
-            this.Controls.Add(this.btnUpdateListado);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAbrirAdmPacientes);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.lstPacientes);
             this.Controls.Add(this.btnGrabarTurno);
             this.Controls.Add(this.btnEliminarTurno);
             this.Controls.Add(this.groupBox1);
@@ -592,7 +522,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtFiltrarTurnos;
         private System.Windows.Forms.Button btnCargarListado;
-        private System.Windows.Forms.Button btnUpdateListado;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.CheckBox ckbEritro;
         private System.Windows.Forms.CheckBox ckbReti;
@@ -600,11 +529,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox ckbExt;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnAbrirAdmPacientes;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ListBox lstPacientes;
         private System.Windows.Forms.Button btnGrabarTurno;
         private System.Windows.Forms.Button btnEliminarTurno;
         private System.Windows.Forms.GroupBox groupBox1;
