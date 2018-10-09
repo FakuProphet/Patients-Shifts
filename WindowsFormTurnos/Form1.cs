@@ -37,8 +37,9 @@ namespace WindowsFormTurnos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            miConexion.OpenConnection();
+          
             fechaActual();
+            cargarCombo(cboHora,"horas");
         }
 
         private void fechaActual()

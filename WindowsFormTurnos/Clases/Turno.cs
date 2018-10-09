@@ -8,5 +8,6 @@ namespace WindowsFormTurnos.Clases
 {
     class Turno
     {
+
     }
 }

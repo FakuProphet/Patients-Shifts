@@ -25,14 +25,12 @@ namespace WindowsFormTurnos.Clases
         { set { dr = value; } get { return dr; } }
 
 
-        public DataTable realizarConsulta(string query)
+        public DataTable realizarConsulta(string tabla)
         {
             DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter();
-            DataSet ds = new DataSet();
-            da.SelectCommand = new MySqlCommand(query, miConexion.OpenConnection());
-            da.Fill(ds);
-            dt = ds.Tables[0];
+            MySqlCommand cmd = new MySqlCommand("select * from " + tabla + "", miConexion.OpenConnection());
+            MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
+            adap.Fill(dt);
             miConexion.CloseConnection();
             return dt;
         }
