@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormTurnos.AccesoBBDD;
+using WindowsFormTurnos.Clases;
 
 namespace WindowsFormTurnos
 {
@@ -16,6 +17,7 @@ namespace WindowsFormTurnos
 
         Conexion miConexion;
         private Timer tiempo;
+        GestorTurno miGestor;
 
         public Form1()
         {
@@ -24,6 +26,7 @@ namespace WindowsFormTurnos
             tiempo.Tick += new EventHandler(eventoReloj);
             tiempo.Enabled = true;
             miConexion = new Conexion();
+            miGestor = new GestorTurno();
         }
 
         private void eventoReloj(object sender, EventArgs e)
@@ -41,6 +44,17 @@ namespace WindowsFormTurnos
         private void fechaActual()
         {
             txtFecha.Text = DateTime.Today.ToShortDateString();
+        }
+
+        private void cargarCombo(ComboBox combo, string nombreTabla)
+        {
+            DataTable tabla = new DataTable();
+            tabla = miGestor.realizarConsulta(nombreTabla);
+            combo.DataSource = tabla;
+            combo.DisplayMember = tabla.Columns[1].ColumnName;
+            combo.ValueMember = tabla.Columns[0].ColumnName;
+            combo.DropDownStyle = ComboBoxStyle.DropDownList;
+            combo.SelectedIndex = 0;
         }
 
         private void btnGrabarTurno_Click(object sender, EventArgs e)
