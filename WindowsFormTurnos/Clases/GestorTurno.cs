@@ -35,18 +35,19 @@ namespace WindowsFormTurnos.Clases
             return dt;
         }
 
-        public void generarTurno(string paciente,int ext, int cito, int eritro, int reti,int dni)
+        public void generarTurno(Turno t)
         {
             String cadena = miConexion.GetCadenaConexion;
-            String query = "INSERT INTO TURNOS (nombrePaciente,eritro,cito,retis,dni) " +
-                           "VALUES (@paciente,@eritro,@cito,@reti,@dni)";
+            String query = "INSERT INTO TURNOS (nombrePaciente,eritro,cito,retis,dni,horaID) " +
+                           "VALUES (@paciente,@eritro,@cito,@reti,@dni,@horaID)";
             using (MySqlCommand command = new MySqlCommand(query,miConexion.OpenConnection()))
             {
-                command.Parameters.AddWithValue("@paciente", paciente);
-                command.Parameters.AddWithValue("@cito", cito);
-                command.Parameters.AddWithValue("@eritro", eritro);
-                command.Parameters.AddWithValue("@reti", reti);
-                command.Parameters.AddWithValue("@dni", dni);
+                command.Parameters.AddWithValue("@paciente", t.nombre );
+                command.Parameters.AddWithValue("@cito", t.cito);
+                command.Parameters.AddWithValue("@eritro", t.eritro);
+                command.Parameters.AddWithValue("@reti", t.reti);
+                command.Parameters.AddWithValue("@dni", t.documento);
+                command.Parameters.AddWithValue("@horaID", t.idHora);
                 int result = command.ExecuteNonQuery();
             }
 

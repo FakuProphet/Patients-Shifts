@@ -54,9 +54,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblHoraActual = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblExisteTurno = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -353,9 +351,7 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.lblHoraActual);
-            this.groupBox1.Controls.Add(this.txtApellido);
             this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lblExisteTurno);
             this.groupBox1.Controls.Add(this.label5);
@@ -378,7 +374,7 @@
             // txtFecha
             // 
             this.txtFecha.Enabled = false;
-            this.txtFecha.Location = new System.Drawing.Point(180, 145);
+            this.txtFecha.Location = new System.Drawing.Point(401, 80);
             this.txtFecha.Margin = new System.Windows.Forms.Padding(4);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.ReadOnly = true;
@@ -390,7 +386,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(28, 150);
+            this.label9.Location = new System.Drawing.Point(321, 83);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 18);
@@ -403,7 +399,7 @@
             this.label8.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Purple;
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(396, 124);
+            this.label8.Location = new System.Drawing.Point(26, 173);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(157, 25);
             this.label8.TabIndex = 20;
@@ -416,19 +412,10 @@
             this.lblHoraActual.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold);
             this.lblHoraActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lblHoraActual.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblHoraActual.Location = new System.Drawing.Point(562, 124);
+            this.lblHoraActual.Location = new System.Drawing.Point(193, 173);
             this.lblHoraActual.Name = "lblHoraActual";
             this.lblHoraActual.Size = new System.Drawing.Size(0, 25);
             this.lblHoraActual.TabIndex = 19;
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Enabled = false;
-            this.txtApellido.Location = new System.Drawing.Point(401, 81);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.ReadOnly = true;
-            this.txtApellido.Size = new System.Drawing.Size(242, 27);
-            this.txtApellido.TabIndex = 18;
             // 
             // txtNombre
             // 
@@ -436,19 +423,8 @@
             this.txtNombre.Location = new System.Drawing.Point(401, 46);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
-            this.txtNombre.Size = new System.Drawing.Size(242, 27);
+            this.txtNombre.Size = new System.Drawing.Size(248, 27);
             this.txtNombre.TabIndex = 17;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(317, 84);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 18);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Apellido";
             // 
             // label2
             // 
@@ -466,7 +442,7 @@
             this.lblExisteTurno.AutoSize = true;
             this.lblExisteTurno.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.lblExisteTurno.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblExisteTurno.Location = new System.Drawing.Point(28, 180);
+            this.lblExisteTurno.Location = new System.Drawing.Point(494, 176);
             this.lblExisteTurno.Name = "lblExisteTurno";
             this.lblExisteTurno.Size = new System.Drawing.Size(26, 18);
             this.lblExisteTurno.TabIndex = 14;
@@ -490,9 +466,9 @@
             this.btnVerificarTurno.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold);
             this.btnVerificarTurno.ForeColor = System.Drawing.Color.White;
             this.btnVerificarTurno.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnVerificarTurno.Location = new System.Drawing.Point(401, 166);
+            this.btnVerificarTurno.Location = new System.Drawing.Point(284, 169);
             this.btnVerificarTurno.Name = "btnVerificarTurno";
-            this.btnVerificarTurno.Size = new System.Drawing.Size(242, 32);
+            this.btnVerificarTurno.Size = new System.Drawing.Size(193, 32);
             this.btnVerificarTurno.TabIndex = 1;
             this.btnVerificarTurno.Text = "Verificar Turno ";
             this.btnVerificarTurno.UseVisualStyleBackColor = false;
@@ -641,9 +617,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblHoraActual;
-        private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblExisteTurno;
         private System.Windows.Forms.Label label5;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +38,6 @@ namespace WindowsFormTurnos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
             fechaActual();
             cargarCombo(cboHora,"horas");
         }
@@ -63,8 +63,9 @@ namespace WindowsFormTurnos
 
             try
             {
-                int codigo = Convert.ToInt32(txtCodigoPaciente.Text);
-                int idHora = Convert.ToInt32(cboHora.SelectedValue);
+                Paciente nuevo = new Paciente();
+                nuevo.nombre = txtCodigoPaciente.Text;
+                nuevo.doc = txtDni.Text;
               
 
                 if (ckbExt.Checked)
@@ -89,14 +90,15 @@ namespace WindowsFormTurnos
 
 
                 if (MetroFramework.MetroMessageBox.Show(this, "Se recomienda revisar que los pedidos esten correctos antes de continuar. Desea registrar el turno? ", "Registrar turno", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {/*
+                {
+                    
                     string tabla = "Turnos";
                     miGestor.generarTurno(codigo, idHora, tabla, ext, cito, eritro, reti);
                     string parametro = txtFecha.Text.Trim();
-                    miGestor.cargarDataGrid(dataGridView1, "select * from turnos v where fecha like '%" + parametro + "%'");
+                    cargarDataGrid(dataGridView1, "select * from turnoslab v where fecha like '%" + parametro + "%'");
                     lblExisteTurno.Text = "";
                     btnGrabarTurno.Enabled = false;
-                    */
+                    
                 }
             }
 
@@ -105,5 +107,28 @@ namespace WindowsFormTurnos
                 MetroFramework.MetroMessageBox.Show(this, error.ToString());
             }
         }
+
+
+        public void cargarDataGrid(DataGridView miDataGrid, string consulta)
+        {
+            DataSet miDataSet = new DataSet();
+            MySqlDataAdapter da = new MySqlDataAdapter(consulta, miConexion.OpenConnection());
+            da.Fill(miDataSet);
+            miConexion.CloseConnection();
+            miDataGrid.RowHeadersVisible = false;
+            miDataGrid.AllowUserToAddRows = false;
+            miDataGrid.AllowUserToDeleteRows = false;
+            miDataGrid.AllowUserToOrderColumns = false;
+            miDataGrid.AllowUserToResizeColumns = true;
+            miDataGrid.AllowUserToResizeRows = false;
+            miDataGrid.AutoResizeColumns();
+            miDataGrid.DataSource = miDataSet.Tables[0];
+            //estas dos lineas siguientes indican q las celdas se ajusten al contenido
+            //-----------------------------------------------------------------------
+            miDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+           // miDataGrid.BorderStyle = BorderStyle.None;
+            //---------------------------------------------------------------------
+        }
+
     }
 }
