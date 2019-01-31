@@ -56,7 +56,7 @@ namespace WindowsFormTurnos
 
         private void btnGrabarTurno_Click(object sender, EventArgs e)
         {
-
+            /*prueba*/
             try
             {
                 Turno nuevo = new Turno();

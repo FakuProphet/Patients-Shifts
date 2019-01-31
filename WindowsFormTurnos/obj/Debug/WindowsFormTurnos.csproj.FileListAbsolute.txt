@@ -13,3 +13,6 @@ C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\obj\Debug\Window
 C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\bin\Debug\MetroFramework.Design.dll
 C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\bin\Debug\MetroFramework.dll
 C:\Users\Prophet\Desktop\clon\Patients-Shifts\WindowsFormTurnos\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Prophet\Desktop\Patients-Shifts\WindowsFormTurnos\bin\Debug\WindowsFormTurnos.exe.config
+C:\Users\Prophet\Desktop\Patients-Shifts\WindowsFormTurnos\obj\Debug\WindowsFormTurnos.exe
+C:\Users\Prophet\Desktop\Patients-Shifts\WindowsFormTurnos\obj\Debug\WindowsFormTurnos.pdb
